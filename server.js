@@ -1,13 +1,21 @@
 // I require express as a dependency, express allows me to handle requests and responses
-var express = require('express');
+const express = require('express');
 //other dependencies
-var morgan = require('morgan');
-var bodyParser = require('body-parser');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const Chat = require('./model');
+const Router = require('./chatRouter')
 
 // I create an express application
-var app = express();
+const app = express();
 //HTTP log layer
 app.use(morgan('common'));
+
+Chat.create('Juan', 'Bryan', 'Hello');
+Chat.create('Juan', 'Bryan', 'Hello again');
+Chat.create('Juan', 'Bryan', 'Hello there');
+
+app.use('/messages', Router);
 
 // I say to my express application that I want my static content to be in the folder pages
 app.use(express.static('pages'));

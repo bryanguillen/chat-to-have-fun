@@ -1,3 +1,5 @@
+let messages = [];
+
 const Chat = {
 	create: function(to, from, content) {
 		const message = {
@@ -5,6 +7,13 @@ const Chat = {
 			from: from, 
 			content: content
 		}
-		return message;
-	}
-}
+		messages.push(message);
+	},
+
+	render: function() {
+		return messages
+	},
+
+} 
+
+module.exports = Chat;
