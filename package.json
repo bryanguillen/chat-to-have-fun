@@ -1,0 +1,22 @@
+{
+  "name": "chat-to-have-fun",
+  "version": "1.0.0",
+  "description": "asynchronous chat",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jotaoncode/chat-to-have-fun.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jotaoncode/chat-to-have-fun/issues"
+  },
+  "homepage": "https://github.com/jotaoncode/chat-to-have-fun#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
